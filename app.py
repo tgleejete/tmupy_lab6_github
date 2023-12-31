@@ -1,5 +1,4 @@
 import streamlit as st
-import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
@@ -16,14 +15,5 @@ selected_hospital = st.sidebar.selectbox('選擇想要顯示的**醫院**...', r
 filtered_data = rx[(rx['year'] == selected_year) & (rx['quantile'] == selected_quarter) & (rx['醫事機構名稱'] == selected_hospital)]
 
 st.dataframe(filtered_data)
-
-
-fig, ax = plt.subplots()
-ax.plot(filtered_data['year'], filtered_data['慢性病連續處方箋釋出率'], marker='o', label='慢性病連續處方箋釋出率')
-ax.set_title('慢性病連續處方箋釋出率趨勢')
-ax.set_xlabel('年度')
-ax.set_ylabel('慢性病連續處方箋釋出率')
-ax.legend()
-st.pyplot(fig)
 
 st.divider()
