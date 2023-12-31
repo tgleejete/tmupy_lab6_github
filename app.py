@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
-
 
 st.title(":flag-tw: 慢性病連續處方箋釋出率")
 st.markdown('[*資料來源：衛生福利部中央健康保險署*](https://data.gov.tw/dataset/79580)')
