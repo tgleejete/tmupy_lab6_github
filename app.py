@@ -9,8 +9,8 @@ rx = pd.read_csv('./data_rxrelease_revise.csv', encoding='utf-8')
 st.sidebar.subheader('調整參數：')
 selected_year = st.sidebar.slider('選擇想要顯示的**年份**...', min_value=rx['year'].min(), max_value=rx['year'].max(), value=rx['year'].min())
 selected_quarter = st.sidebar.slider('選擇想要顯示的**季度**...', min_value=1, max_value=4, value=1)
-selected_hospitals = st.multiselect("選擇醫院", rx['hopital'].unique())
-filtered_data = rx[(rx['year'] == selected_year) & (rx['quarter'] == selected_quarter) & (rx['hopital'].isin(selected_hospitals))]
+selected_hospitals = st.multiselect("選擇醫院", rx['hospital'].unique())
+filtered_data = rx[(rx['year'] == selected_year) & (rx['quarter'] == selected_quarter) & (rx['hospital'].isin(selected_hospitals))]
 
 st.dataframe(filtered_data)
 st.divider()
