@@ -2,8 +2,6 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-from pylab import matplotlib
-from matplotlib import font_manager
 
 
 st.title(":flag-tw: 慢性病連續處方箋釋出率")
